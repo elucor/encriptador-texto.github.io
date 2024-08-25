@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    background-color: #F3F5FC;
+    font-family: 'Inter';
+}
+
+header{
+    margin-bottom: 54px;
+    width: 50%;
+}
+
+header img{
+    width: 120px;
+    height: 48px;
+    margin-bottom: 5px;
+}
+
+
+main{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.seccion_principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+
+}
+
+.textarea_txt{
+    width: 100%;
+    max-width: 577px;
+    height: 64dvh;
+    border-color: transparent;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    resize: none;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 400;
+    color: #0a3871;
+    margin-bottom: 3rem;
+
+}
+::placeholder{color: #0a3871;}
+
+.exclamacion-mensaje{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.contenedor-items{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-Encriptar{
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #f3f3f3;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    font-weight: 60;
+}
+
+.btn-Desencriptar{
+    background: #D8DFE8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+
+}
+
+.resultado-encriptado{
+    background-color: #D8DFE8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    height: 85dvh;
+    border-radius: 24px;
+    box-shadow: 10px 24px 32px -5px;
+    max-width: 400px;
+    width: 100%;
+    overflow: auto;
+}
+
+.imagen-muñeco{
+    display: block;
+    
+
+    
+}
+
+.loader {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 15px;
+    animation: l1 1s linear infinite alternate;
+
+}
+.loader:before {
+    content:"Loading..."
+}
+
+@keyframes l1 {to{opacity: 0}}
+
+
+
+.subtitulo{
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+}
+
+.parrafo{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 5px;
+}
+
+.copyright{
+    background-color: #0a3871;
+    color: #D8DFE8;
+    text-align: center;
+}
+
+.boton_copiar_resultado{
+    background: #D8DFE8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    margin-left: 20px;
+
+}
+
+
+.hidden{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+    .contenedor-items{
+        justify-content: center;
+    }
+    .resultado-encriptado{
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 180px;
+    }
+    .imagen-muñeco{
+        display: none;
+    }
+}
