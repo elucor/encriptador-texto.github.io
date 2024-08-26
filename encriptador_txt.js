@@ -7,6 +7,8 @@ const parrafo = d.querySelector(".parrafo");
 const botonEncriptar = d.querySelector(".btn-Encriptar");
 const botonDesencriptar = d.querySelector(".btn-Desencriptar");
 const botonCopiar = d.querySelector(".boton_copiar_resultado");
+const caracteresInvalidos = d.querySelector(".texto-aviso");
+
 
 
 const llaves = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufa"]];
@@ -49,6 +51,13 @@ function desencriptarMensaje(mensaje){
 }
 // Elementos  Dinamicos ocultar
 textArea.addEventListener("input", (e) =>{
+    let mensaje = e.target.value;
+    let caracteresInvalidos =  /[^a-z\s]/g; 
+    if(caracteresInvalidos.test(mensaje)){
+        alert("Solo letras minusculas y sin acento.");
+         mensaje = mensaje.replace(caracteresInvalidos, "");
+        textArea.value = mensaje;
+    } 
     imagenMuneco.style.display = "none";
     console.log(e.target.value);
     loader.classList.remove("hidden");
